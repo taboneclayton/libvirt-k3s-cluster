@@ -1,0 +1,2 @@
+instance-id: iid-ubuntu-1.0
+local-hostname: ${hostname}

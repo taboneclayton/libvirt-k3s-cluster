@@ -1,0 +1,16 @@
+k3s_server_node_instances = 3
+k3s_agent_node_instances = 2
+
+# Hashed password can be generated with the following command:
+# ```mkpasswd --method=SHA-512 --rounds=4096```
+# For more details refer to the README
+hashed_password = "See README and replace this string with hashed password"
+
+# Generate an SSH key pair and replace the sample key below with the public key generated
+ssh_public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJCWeu6X8vwVqzxF8gpPTu82ppaj+UTry8sOu871M/Xe someuser@localhost"
+
+# Change this with some local (non-root) user which will be used to Run the Ansible playbook
+ansible_user = "someuser"
+
+# Specify the base path of the folder containing the Ansible playbook which will provision the K3s cluster. Must be an absolute path! See README for more details.
+ansible_playbook_path = "/home/someuser/IaC/ansible/k3s-ansible"
