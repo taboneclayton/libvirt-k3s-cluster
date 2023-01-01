@@ -5,14 +5,16 @@ The [libvirt terraform provider](https://registry.terraform.io/providers/dmacvic
 
 
 ## Configure Variables
-The [terraform.tfvars](./terraform.tfvars) includes some default values that you might want to change.
+The [terraform.tfvars.example](./terraform.tfvars.example) includes some default values that you might want to change. Create a copy of this file in the same folder and name this copy `terraform.tfvars`.
 
-The number of server nodes can be configured by changing the `k3s_server_node_instances`. If an HA cluster is required, the minimum of 3 is needed. For larger cluster sizes, it is recommended to always use an odd number of server nodes.
+The number of server nodes can be configured by changing the `k3s_server_node_instances`. If an HA cluster is required, a minimum of 3 server nodes are needed. For larger cluster sizes, it is recommended to always use an odd number of server nodes.
 
-The number of worker nodes can be configured by changing the `k3s_agent_node_instances`. This can be set to any number of nodes.
+The number of worker nodes can be configured by changing the `k3s_agent_node_instances`. This value can be set to any number of nodes.
 
 The `hashed_password` is omitted on purpose. This can be generated with the following command:
+
  ```mkpasswd --method=SHA-512 --rounds=4096```
+ 
 For more details refer to the cloud-init docs [here](https://cloudinit.readthedocs.io/en/0.7.8/topics/examples.html)
 This password is not needed for SSH access to the nodes, however it might be needed to access these via the Hypervisor console window.
 
