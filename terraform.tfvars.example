@@ -12,5 +12,5 @@ ssh_public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJCWeu6X8vwVqzxF8gpPTu82pp
 # Change this with some local (non-root) user which will be used to Run the Ansible playbook
 ansible_user = "someuser"
 
-# Specify the base path of the folder containing the Ansible playbook which will provision the K3s cluster. Must be an absolute path! See README for more details.
+# Specify the absolute base path of the folder containing the Ansible playbook which will provision the K3s cluster. Must be an absolute path! See README for more details.
 ansible_playbook_path = "/home/someuser/IaC/ansible/k3s-ansible"

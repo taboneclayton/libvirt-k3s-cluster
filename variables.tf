@@ -26,6 +26,6 @@ variable "ansible_user" {
 }
 
 variable "ansible_playbook_path" {
-  description = "The root path of the Ansible playbook to be triggered by Terraform. See README for more details."
+  description = "The absolute root path of the Ansible playbook to be triggered by Terraform. See README for more details."
   type        = string
 }
