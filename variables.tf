@@ -13,16 +13,19 @@ variable "k3s_agent_node_instances" {
 variable "hashed_password" {
   description = "Hashed password to be set in the user-data portion of the cloud-init configuration. See README for more details."
   type        = string
+  sensitive   = true
 }
 
 variable "ssh_public_key" {
   description = "SSH public key to be set in the user-data portion of the cloud-init configuration."
   type        = string
+  sensitive   = true
 }
 
 variable "ansible_user" {
   description = "The user which will run the Ansible playbook"
   type        = string
+  sensitive   = true
 }
 
 variable "ansible_playbook_path" {
