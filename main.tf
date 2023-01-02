@@ -1,5 +1,5 @@
 provider "libvirt" {
-  # Connect to the local Qemu instance. See 
+  # Connect to the local Qemu instance. See https://registry.terraform.io/providers/dmacvicar/libvirt/latest/docs#the-connection-uri
   uri = "qemu:///system"
 }
 
